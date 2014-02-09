@@ -1,0 +1,29 @@
+<h1>Listing offenders</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @offenders.each do |offender| %>
+      <tr>
+        <td><%= offender.name %></td>
+        <td><%= offender.age %></td>
+        <td><%= link_to 'Show', offender %></td>
+        <td><%= link_to 'Edit', edit_offender_path(offender) %></td>
+        <td><%= link_to 'Destroy', offender, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Offender', new_offender_path %>

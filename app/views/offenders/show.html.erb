@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @offender.name %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @offender.age %>
+</p>
+
+<%= link_to 'Edit', edit_offender_path(@offender) %> |
+<%= link_to 'Back', offenders_path %>
